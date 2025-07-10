@@ -1,3 +1,9 @@
+/*
+Name: Sreehari Sreekumar Nair
+Date: July 10, 2025
+Purpose: Eligible to vote or not
+*/
+
 package test2;
 import java.util.Scanner;
 public class Example {
