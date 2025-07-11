@@ -18,8 +18,8 @@ public class SwitchGrade {
 			default -> "Invalid";
 		};
 		
-		System.out.println("Grade: "+ grade);
 		System.out.println("Result: " + result);
+		input.close();
 	}
 
 }
