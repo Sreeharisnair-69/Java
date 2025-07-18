@@ -3,7 +3,7 @@
  * Date: July 18, 2025
  * Purpose: Print details about students using classes, objects and parametric constructors.
  */
-
+import java.util.Scanner;
 class Student{
 	String name;
 	int rollNo;
@@ -23,9 +23,15 @@ class Student{
 }
 class stuDetails {
 	public static void main(String[] args) {
-		Student S1 = new Student("John",50,"CSE");
-		Student S2 = new Student("Doe",25,"AD");
+		String name;
+		int rollNo;
+		String dept;
+		Scanner sc = new Scanner(System.in);
+		name = sc.nextLine();
+		rollNo = sc.nextInt();
+		sc.nextLine();
+		dept = sc.nextLine();
+		Student S1 = new Student(name,rollNo,dept);
 		S1.printStudent();
-		S2.printStudent();	
 	}
 }
