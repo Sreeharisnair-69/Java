@@ -30,9 +30,7 @@ class Ebook extends Books{
 	}
 	
 	public void displayDetails(){
-		System.out.println("Title: "+ title);
-		System.out.println("Author: "+ author);
-		System.out.println("Price: "+ price);
+		super.displayDetails();
 		System.out.println("File Size (MB): "+ fileSizeMB +"\n");
 		
 	}
@@ -47,9 +45,7 @@ class PrintedBook extends Books{
 	}
 	
 	public void displayDetails(){
-		System.out.println("Title: "+ title);
-		System.out.println("Author: "+ author);
-		System.out.println("Price: "+ price);
+		super.displayDetails();
 		System.out.println("Number Of Pages: "+ numberOfPages);
 		
 	}
