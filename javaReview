@@ -2,54 +2,56 @@ class Book{
 	String title;
 	String author;
 	final int bookID;
-	static int bookCounter = 100;
-	static final String LIBRARY_NAME = "Central Library";
+	static int bookNo;
+	static int bookCounter=100;
 	boolean showLibrary;
-	static int noOfBooks;
+	static final String LIBRARY_NAME="Central Library";
 	
 	Book(){
 		this.title=title;
 		this.author=author;
-		this.bookID = bookCounter++;
+		this.bookID=bookCounter;
 	}
-	
-	Book(String title, String author){
+	Book(String title,String author){
 		this.title=title;
 		this.author=author;
-		this.bookID = bookCounter++;
-		noOfBooks++;
+		bookID=bookCounter++;
+		bookNo++;
 	}
 	
-	public void displayInfo(){
-		System.out.println("Title: "+title);
-		System.out.println("Author: "+author);
-		System.out.println("Book ID: "+bookID+"\n");
+	public void displayInfo() {
+		System.out.println("Title: "+ title);
+		System.out.println("Author: "+ author);
+		System.out.println("Book ID: "+ bookID);
 	}
-	
 	public void displayInfo(boolean showLibrary) {
-		if(showLibrary == true){
-			System.out.println("Library Name: "+LIBRARY_NAME+"\n");
+		if (showLibrary == true) {
+			System.out.println("Library Name: "+ LIBRARY_NAME);
+		}
+		else {
+			System.out.println("Library Name: "+ "None");
 		}
 	}
-	
 	public static void displayTotalBooks() {
-		System.out.println("Number of books: "+noOfBooks);
+		System.out.println("Total No of Books: "+ bookNo);
 	}
 }
+
 public class topicReview {
-	public static void main(String [] args) {
-		Book b1 = new Book("Title1","Author1");
-		b1.displayInfo();
-		b1.displayInfo(true);
-		
-		
-		Book b2 = new Book("Title2","Author2");
-		b2.displayInfo();
-		b2.displayInfo(true);
-		
-		Book b3 = new Book("Title3","Author3");
-		b3.displayInfo();
-		b3.displayInfo(true);
-		b3.displayTotalBooks();
+	public static void main(String[] args) {
+	Book b1 = new Book();
+	b1.displayInfo();
+	b1.displayInfo(false);
+	b1.displayTotalBooks();
+	
+	Book b2 = new Book("Title 1", "Author 1");
+	b2.displayInfo();
+	b2.displayInfo(true);
+	b2.displayTotalBooks();
+	
+	Book b3 = new Book("Title 2", "Authpr 2");
+	b3.displayInfo();
+	b3.displayInfo(true);
+	b3.displayTotalBooks();
 	}
 }
