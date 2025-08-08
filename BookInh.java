@@ -1,3 +1,8 @@
+/*
+Name: Sreehari Sreekumar Nair
+Date: 08 August 2025
+Purpose: Use inheritence property to prit details of E-Book and Printed Book. 
+*/
 class Books{
 	String title;
 	String author;
